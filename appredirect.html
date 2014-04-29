@@ -15,14 +15,14 @@
           var ua = navigator.userAgent
           if ( ua.match(/iPhone/i) || ua.match(/iPod/i) || ua.match(/iPad/i) )
           {
-          window.location* *= "https://itunes.apple.com/app/id835731296";
+          window.location = "https://itunes.apple.com/app/id835731296";
           }
           else if ( ua.match(/Android/i) )
           {
-          window.location* *= "market://details?id=com.musescore.player&utm_source=musescore.com&utm_medium=landing&utm_campaign=redirect";
+          window.location = "market://details?id=com.musescore.player&utm_source=musescore.com&utm_medium=landing&utm_campaign=redirect";
           }
           else {
-            window.location* *= "http://musescore.com/apps";
+            window.location = "http://musescore.com/apps";
           }
         });
         
