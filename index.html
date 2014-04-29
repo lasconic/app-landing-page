@@ -18,6 +18,7 @@
 
 html,body {
     height:100%;
+    background-color:#000;
     background:center no-repeat fixed url('http://cdn.musescore.com/images/bg-orchestra.jpg');
 }
 
@@ -107,21 +108,59 @@ footer .nav>li>a:hover {
 }
 
 
-.bq { 
-      width: 450px; 
-      overflow: hidden;    
+.bq {    
       color: #fff;
-      padding: 10px 10px 5px 10px;
     }
 
+.bq blockquote {
+  border: none;
+  position: relative;
+  margin-bottom: 5px
+}
+
+.bq blockquote:before{
+  content: "\201C";
+  position: absolute;
+  left: 0px;
+  top: 3px;
+  font-size: 34px;
+  color: #fff;
+}
+
+.bq .quotemark {
+  position: absolute;
+  font-size: 34px;
+  color: #fff;
+  bottom: -5px;
+  padding-left: 3px;
+}
+
 .bq .source { 
-      display: block; 
-      width: 100%; 
-      margin-bottom: 5px; 
-      font-weight: bold;
-      font-size: 13px; 
-      text-shadow: 0px 1px 0px #000; 
-      padding: 6px 11px; 
+  border-top: 1px solid #fff;
+  padding-top: 10px;
+  position: relative;
+  margin-bottom: 22px;
+  padding-left: 20px;
+}
+
+.bq .source:before, .bq .source:after {
+content: "";
+position: absolute;
+border: 5px solid transparent;
+top: 100%;
+left: 50%;
+margin-left: -10px;
+border-top-color: #fff;
+left: 20%;
+}
+
+.bq .source:before {
+  border-top-color: #bbbbcc;
+  top: 0px;
+}
+
+.bq .source:after {
+top: -1px;
 }
 
 .bq p { 
@@ -133,6 +172,10 @@ footer .nav>li>a:hover {
       
 .feature-list .col-md-4 {
   margin-bottom: 20px;
+}
+
+.badges img {
+  max-height: 52px;
 }
       </style>
     </head>
@@ -189,7 +232,7 @@ footer .nav>li>a:hover {
   <br>
   <br>
   <br>
-  <div class="row">
+  <div class="row badges">
     <div class="col-sm-2 col-sm-offset-3">
         <a href="https://itunes.apple.com/app/id835731296">
           <img src="http://cdn.musescore.com/images/Download_on_the_App_Store_Badge_US-UK_202x60.png" alt="" class="img-responsive" />
@@ -231,28 +274,28 @@ footer .nav>li>a:hover {
     <div class="row">
       <div class="col-sm-4 col-sm-offset-2">
         <div class="bq">
-          <p>I love it. It’s easy to use and fun<p>
-          <span class="source">Sunny Abarbanell</span>
+          <blockquote>I love it. It’s easy to use and fun<span class="quotemark">”</span></blockquote>
+          <div class="source">Sunny Abarbanell</div>
         </div>
       </div>
       <div class="col-sm-4">
         <div class="bq">
-          <p>Thanks for releasing the iPhone version. Useful for my daily train commute. Can study sheet music &amp; also try to improve my ear.</p>
-          <span class="source">Kosuke Tanaka</span>
+          <blockquote>I really wanted a simple way of playing Musescore files on ipad.<span class="quotemark">”</span></blockquote>
+          <div class="source">Merehound</div>
         </div>
       </div>
     </div>
     <div class="row">
       <div class="col-sm-4 col-sm-offset-2">
         <div class="bq">
-          <p>I really wanted a simple way of playing Musescore files on ipad.</p>
-          <span class="source">Merehound</span>
+          <blockquote>Thanks for releasing the iPhone version. Useful for my daily train commute. Can study sheet music &amp; also try to improve my ear.<span class="quotemark">”</span></blockquote>
+          <div class="source">Kosuke Tanaka</div>
         </div>
       </div>
       <div class="col-sm-4">
         <div class="bq">
-          <p>Since the first day that I bought my iPad, I have been longing for an app like this. All the music that I want to play, or ever might want to play, right there in front of me</p>
-          <span class="source">Maarten De Bock</span>
+          <blockquote>Since the first day that I bought my iPad, I have been longing for an app like this. All the music that I want to play, or ever might want to play, right there in front of me.<span class="quotemark">”</span></blockquote>
+          <div class="source">Maarten De Bock</div>
         </div>
       </div>
      </div>
@@ -308,7 +351,7 @@ footer .nav>li>a:hover {
   </div>
   <br>
   <br>
-  <div class="row">
+  <div class="row badges">
     <div class="col-sm-2 col-sm-offset-3">
         <a href="https://itunes.apple.com/app/id835731296">
           <img src="http://cdn.musescore.com/images/Download_on_the_App_Store_Badge_US-UK_202x60.png" alt="" class="img-responsive" />
