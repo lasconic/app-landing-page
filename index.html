@@ -14,9 +14,8 @@
         
 <style type="text/css">
 
-
 /* default screen, non-retina */
-html, body { background:center no-repeat fixed url('//cdn.musescore.com/images/bg-orchestra800@x2.jpg'); }
+html, body { background:center no-repeat fixed url('//cdn.musescore.com/images/bg-orchestra800.jpg'); }
 
 @media only screen and (max-width: 320px) {
   /* Small screen, non-retina */
@@ -49,6 +48,17 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 321px) 
   /* Medium screen, retina */
   html, body { background:center no-repeat fixed url('//cdn.musescore.com/images/bg-orchestra538@x2.jpg'); }
 }
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2)      and (min-width: 539px),
+only screen and (   min--moz-device-pixel-ratio: 2)      and (min-width: 539px),
+only screen and (   -moz-min-device-pixel-ratio: 2)      and (min-width: 539px),
+only screen and (     -o-min-device-pixel-ratio: 2/1)    and (min-width: 539px),
+only screen and (        min-device-pixel-ratio: 2)      and (min-width: 539px),
+only screen and (                min-resolution: 192dpi) and (min-width: 539px),
+only screen and (                min-resolution: 2dppx)  and (min-width: 539px) {
+  /* Large screen, retina */
+  html, body { background:center no-repeat fixed url('//cdn.musescore.com/images/bg-orchestra800@x2.jpg'); }
+}
 
 html, body {
     height:100%;
@@ -58,6 +68,7 @@ html, body {
     -o-background-size: cover;
     background-size: cover;
 }
+
 
 .icon-bar {
     background-color:#F8F2E5;
