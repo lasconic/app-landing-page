@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
-        <title>MuseScore Player</title>
+        <title>MuseScore App</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
         
@@ -14,27 +14,74 @@
         
 <style type="text/css">
 
-html,body {
+html, body {
     height:100%;
     background-color:#000;
-    background:center no-repeat fixed url('http://cdn.musescore.com/images/bg-orchestra.jpg');
 }
 
+
+/* default screen, non-retina */
+html, body { background:center no-repeat fixed url('//cdn.musescore.com/images/bg-orchestra800.jpg'); }
+
+@media only screen and (max-width: 320px) {
+  /* Small screen, non-retina */
+  html, body { background:center no-repeat fixed url('//cdn.musescore.com/images/bg-orchestra290.jpg'); }
+}
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2)      and (max-width: 320px),
+only screen and (   min--moz-device-pixel-ratio: 2)      and (max-width: 320px),
+only screen and (   -moz-min-device-pixel-ratio: 2)      and (max-width: 320px),
+only screen and (     -o-min-device-pixel-ratio: 2/1)    and (max-width: 320px),
+only screen and (        min-device-pixel-ratio: 2)      and (max-width: 320px),
+only screen and (                min-resolution: 192dpi) and (max-width: 320px),
+only screen and (                min-resolution: 2dppx)  and (max-width: 320px) {
+  /* Small screen, retina */
+  html, body { background:center no-repeat fixed url('//cdn.musescore.com/images/bg-290@x2.jpg'); }
+}
+@media only screen and (min-width: 321px) and (max-width: 538px) {
+  /* Medium screen, non-retina */
+  html, body { background:center no-repeat fixed url('//cdn.musescore.com/images/bg-orchestra538.jpg'); }
+}
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2)      and (min-width: 321px) and (max-width: 538px),
+only screen and (   min--moz-device-pixel-ratio: 2)      and (min-width: 321px) and (max-width: 538px),
+only screen and (   -moz-min-device-pixel-ratio: 2)      and (min-width: 321px) and (max-width: 538px),
+only screen and (     -o-min-device-pixel-ratio: 2/1)    and (min-width: 321px) and (max-width: 538px),
+only screen and (        min-device-pixel-ratio: 2)      and (min-width: 321px) and (max-width: 538px),
+only screen and (                min-resolution: 192dpi) and (min-width: 321px) and (max-width: 538px),
+only screen and (                min-resolution: 2dppx)  and (min-width: 321px) and (max-width: 538px) {
+  /* Medium screen, retina */
+  html, body { background:center no-repeat fixed url('//cdn.musescore.com/images/bg-orchestra538@x2.jpg'); }
+}
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2)      and (min-width: 539px),
+only screen and (   min--moz-device-pixel-ratio: 2)      and (min-width: 539px),
+only screen and (   -moz-min-device-pixel-ratio: 2)      and (min-width: 539px),
+only screen and (     -o-min-device-pixel-ratio: 2/1)    and (min-width: 539px),
+only screen and (        min-device-pixel-ratio: 2)      and (min-width: 539px),
+only screen and (                min-resolution: 192dpi) and (min-width: 539px),
+only screen and (                min-resolution: 2dppx)  and (min-width: 539px) {
+  /* Large screen, retina */
+  html, body { background:center no-repeat fixed url('//cdn.musescore.com/images/bg-orchestra800@x2.jpg'); }
+}
+
+
 .icon-bar {
-    background-color:#fff;
+    background-color:#F8F2E5;
 }
 
 .navbar-trans {
-    background-color:#000;
-    color:#fff;
+    background-color:#F8F2E5;
+    color:#7B756B;
 }
 
 .navbar-trans li>a:hover,.navbar-trans li>a:focus {
-    background-color:#222;
+    background-color:#CFC9BD;
 }
 
 .navbar-trans a{
-    color:#fefefe;
+    color:#7B756B;
 }
 
 .navbar-trans .form-control:focus {
@@ -60,17 +107,17 @@ section {
 }
   
 #section1 {
-    color:rgba(255, 255, 255, 0.9);
+    color:#F8F2E5;
 }
   
 #section2 {
-    background-color: #d5d5df;
-    color:#686868;
+    background-color: #7B756B;
+    color:#F8F2E5;
 }
   
 #section3 {
     
-    color:rgba(255, 255, 255, 0.9);
+    color:#F8F2E5;
 }
 
 #section4 {
@@ -88,8 +135,8 @@ section {
 }
 
 footer {
-    background-color:#494949;
-    color:#ddd;
+    background-color:#F8F2E5;
+    color:#7B756B;
     min-height:100px;
     padding-top:20px;
     padding-bottom:40px;
@@ -97,12 +144,12 @@ footer {
 
 footer .nav>li>a {
     padding:3px;
-    color:#ccc;
+    color:#7B756B;
 }
 
 footer .nav>li>a:hover {
     background-color:transparent;
-    color:#fff;
+    color:#CFC9BD;
 }
 
 
@@ -202,7 +249,7 @@ top: -1px;
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">MuseScore Player</a>
+            <a class="navbar-brand" href="#">MuseScore App</a>
           </div>
           
           <div class="navbar-collapse collapse" id="navbar-collapsible">
@@ -219,7 +266,7 @@ top: -1px;
       </nav>
 
 <section class="container-fluid" id="section1">
-  <h1 class="text-center v-center">MuseScore Player</h1>
+  <h1 class="text-center v-center">The MuseScore App</h1>
   <div class="row">
         <div class="col-sm-4">
           <div class="row">
@@ -265,7 +312,7 @@ top: -1px;
     <div class="col-sm-8 col-sm-offset-2 text-center">
         <h1>Who is this app for?</h1>
         <br>
-        <p class="lead">The MuseScore Player app is designed for those who want to boost their music practice, learn and memorise faster, or simply enjoy reading and listening to scores. This app will let you listen to the notes at your chosen tempo, as well as change the volume of the other parts. These features make it much easier to learn those difficult passages and speed up your ability to perfect your part!
+        <p class="lead">The MuseScore app is designed for those who want to boost their music practice, learn and memorise faster, or simply enjoy reading and listening to scores. This app will let you listen to the notes at your chosen tempo, as well as change the volume of the other parts. These features make it much easier to learn those difficult passages and speed up your ability to perfect your part!
         </p>
         <br> 
        <img src="http://cdn.musescore.com.s3.amazonaws.com/images/musescore-player-ipad.png" alt="" class="img-responsive" />
@@ -330,7 +377,7 @@ top: -1px;
         <div class="row feature-list">
           <div class="col-md-4 col-sm-6">
             <h4><i class="fa fa-money"></i> Affordable</h4>
-            MuseScore Player is very cheap. The score creation tool, MuseScore, is even cheaper, it's free!
+            MuseScore Songbook is very cheap. The score creation tool, MuseScore, is even cheaper, it's free!
           </div>
           <div class="col-md-4 col-sm-6">
             <h4><i class="fa fa-music"></i> Metronome</h4>
